@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Nom du groupe: Utilisez une structure générique puisque vous n'avez pas de nom de domaine -->
+    <groupId>com.currencyconverter</groupId>
+
+    <!-- Identifiant de l'artéfact: Le nom de votre projet -->
+    <artifactId>currency-converter-in-java-master</artifactId>
+
+    <!-- Version du projet -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Propriétés du projet pour spécifier la version de Java -->
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+
+    <!-- Dépendances du projet -->
+    <dependencies>
+        <!-- Ajoutez ici les dépendances de votre projet, comme JUnit pour les tests -->
+        <!-- Exemple pour JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+    
+        <plugins>
+            <!-- Plugin du compilateur Maven pour utiliser la version spécifiée de Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
